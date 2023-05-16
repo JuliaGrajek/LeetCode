@@ -17,3 +17,12 @@ class Solution:
             n = curr.next
         curr.next = previous
         return curr
+    
+    
+    def reverseList2(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        
+        def reverseListRecu(head):
+            if not head or not head.next: return head
+            node, head.next.next, head.next = reverseListRecu(head.next), head, None
+            return node
+        return reverseListRecu(head)
