@@ -11,7 +11,4 @@ class Solution:
         for key, value in occurences.items():
             if value not in lst:
                 lst.append(value)
-        if len(lst)==len(occurences):
-            return True
-        else:
-            return False
+        return len(lst)==len(occurences)
