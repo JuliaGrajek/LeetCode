@@ -28,8 +28,7 @@ class Solution:
             curr_i, curr_j, curr_t = queue.popleft()
             print((curr_i, curr_j, curr_t, no_fresh_oranges))
             for d in dirs:
-                if no_fresh_oranges==0:
-                    return curr_t
+                
                 next_i = curr_i + d[0]
                 next_j = curr_j + d[1]
 
