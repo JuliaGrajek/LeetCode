@@ -1,4 +1,7 @@
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
-        return 2*sum(set(nums))-sum(nums)
+        once = 0
+        for i in nums:
+            once ^= i
+        return once
             
